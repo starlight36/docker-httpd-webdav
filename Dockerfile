@@ -6,3 +6,5 @@ RUN cp -r /usr/local/apache2/conf /tmp/httpd-conf
 COPY entrypoint.sh /usr/local/sbin/entrypoint.sh
 RUN chmod +x /usr/local/sbin/entrypoint.sh
 ENTRYPOINT ["/usr/local/sbin/entrypoint.sh"]
+EXPOSE 80
+CMD ["httpd-foreground"]
